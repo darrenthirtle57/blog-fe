@@ -1,0 +1,17 @@
+/* 404.module.css */
+
+.container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: red; /* Change as needed */
+  }
+  
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
