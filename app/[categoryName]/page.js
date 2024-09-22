@@ -57,13 +57,13 @@ export default function CategoryPage() {
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      url: "https://sgetintopc.com",
+      url: "https://gaullacltd.co.uk",
       potentialAction: {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
           urlTemplate:
-            "https://sgetintopc.comsearch?query={search_term_string}",
+            "https://gaullacltd.co.uk/search?query={search_term_string}",
         },
         "query-input": {
           "@type": "PropertyValueSpecification",
@@ -98,7 +98,7 @@ export default function CategoryPage() {
           position: 1,
           item: {
             "@type": "Thing",
-            "@id": `https://sgetintopc.com${categoryName}`,
+            "@id": `https://gaullacltd.co.uk${categoryName}`,
             name: `${categoryName}`,
           },
         },

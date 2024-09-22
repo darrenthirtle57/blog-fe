@@ -60,7 +60,7 @@ export default function BlogView() {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       name: data?.data?.software_name,
-      url: `https://sgetintopc.com/${data?.data?.category?.slug}/${data?.data?.slug}`,
+      url: `https://gaullacltd.co.uk/${data?.data?.category?.slug}/${data?.data?.slug}`,
       version: data?.data?.software_version,
       description: data?.data?.software_version,
       image: data?.data?.software_image,
@@ -72,7 +72,7 @@ export default function BlogView() {
       publisher: {
         "@type": "Organization",
         name: data?.data?.publisher_name,
-        url: "https://sgetintopc.com",
+        url: "https://gaullacltd.co.uk",
       },
       offers: {
         "@type": "Offer",
@@ -95,7 +95,7 @@ export default function BlogView() {
           position: 1,
           item: {
             "@type": "Thing",
-            "@id": `https://sgetintopc.com/${data?.data?.category?.slug}/${data?.data?.slug}`,
+            "@id": `https://gaullacltd.co.uk/${data?.data?.category?.slug}/${data?.data?.slug}`,
             name: `${data?.data?.operating_system}`,
           },
         },
@@ -112,16 +112,16 @@ export default function BlogView() {
       isAccessibleForFree: "http://schema.org/True",
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": `https://sgetintopc.com/${data?.data?.category?.slug}/${data?.data?.slug}`,
+        "@id": `https://gaullacltd.co.uk/${data?.data?.category?.slug}/${data?.data?.slug}`,
       },
       author: {
         "@type": "Person",
         name: data?.data?.publisher_name,
-        url: "https://www.sgetintopc.com",
+        url: "https://www.gaullacltd.co.uk",
       },
       publisher: {
         "@type": "Organization",
-        name: "SGetInToPC",
+        name: "gaullacltd",
         logo: {
           "@type": "ImageObject",
           url: "./images/zeezfaveicon.png",
@@ -131,13 +131,13 @@ export default function BlogView() {
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      url: "https://sgetintopc.com",
+      url: "https://gaullacltd.co.uk",
       potentialAction: {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
           urlTemplate:
-            "https://sgetintopc.comsearch?query={search_term_string}",
+            "https://gaullacltd.co.uk/search?query={search_term_string}",
         },
         "query-input": {
           "@type": "PropertyValueSpecification",
@@ -195,7 +195,7 @@ export default function BlogView() {
               ],
               publisher: {
                 "@type": "Organization",
-                name: "SGetInToPC",
+                name: "gaullacltd",
                 logo: {
                   "@type": "ImageObject",
                   url: "https://crackswall.vercel.app/logo.png",

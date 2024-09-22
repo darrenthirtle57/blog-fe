@@ -20,7 +20,7 @@ export async function GET() {
   // Dynamically generate URLs for blog posts
   const dynamicPages = blogPosts.map((post) => {
     return {
-      loc: `https://sgetintopc.com/${post?.category?.slug}/${post.blogkey}`, // Dynamic blog post URL
+      loc: `https://gaullacltd.co.uk/${post?.category?.slug}/${post.blogkey}`, // Dynamic blog post URL
       lastmod: post.updated_at, // Last modified date of the post
       image: post?.images[0]?.image_path,
     };
@@ -29,7 +29,7 @@ export async function GET() {
   // Combine static and dynamic pages
   const allPages = [
     ...staticPages.map((page) => ({
-      loc: `https://sgetintopc.com/${page}`,
+      loc: `https://gaullacltd.co.uk/${page}`,
       lastmod: new Date().toISOString(),
     })),
     ...dynamicPages,
