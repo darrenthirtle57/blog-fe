@@ -42,13 +42,13 @@ export default function Home() {
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      url: "https://sgetintopc.com",
+      url: "https://gaullacltd.co.uk",
       potentialAction: {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
           urlTemplate:
-            "https://sgetintopc.comsearch?query={search_term_string}",
+            "https://gaullacltd.co.uk/search?query={search_term_string}",
         },
         "query-input": {
           "@type": "PropertyValueSpecification",
@@ -79,25 +79,25 @@ export default function Home() {
   return (
     <HelmetWrapper>
       <Helmet>
-        <title>SGetInToPC - Full Version Software</title>
+        <title>gaullacltd - Full Version Software</title>
         <meta
           name="description"
           content={
             "Free Download Windows & MacOS software, Android Apps & Games, E-Learning Videos & E-Books, PC Games, Scripts and much more."
           }
         />
-        <link rel="canonical" href={`https://sgetintopc.com`} />
+        <link rel="canonical" href={`https://gaullacltd.co.uk`} />
         {/* <meta
           property="og:image"
           content={data?.data?.software_image || "Default OG Image URL"}
         /> */}
         <meta
           property="og:url"
-          content={"https://sgetintopc.com" || "Default OG URL"}
+          content={"https://gaullacltd.co.uk" || "Default OG URL"}
         />
         <meta
           property="og:title"
-          content={"SGetInToPC - Full Version Software" || "Default OG Title"}
+          content={"gaullacltd - Full Version Software" || "Default OG Title"}
         />
       </Helmet>
       <main className="w-full min-h-[730px]">

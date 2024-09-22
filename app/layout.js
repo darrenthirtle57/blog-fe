@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata = {
-//   title: "SGetInToPC - Full Version Software",
+//   title: "gaullacltd - Full Version Software",
 //   description:
 //     "Free Download Windows & MacOS software, Android Apps & Games, E-Learning Videos & E-Books, PC Games, Scripts and much more.",
 // };
