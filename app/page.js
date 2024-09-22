@@ -24,6 +24,8 @@ export default function Home() {
     }
   };
   const { isLoading, data } = useGetBlogsQuery(currentPage);
+  // console.log("all blogs list data...", data?.data);
+
   const { data: blogGameCategoryData } = useGetBlogsByCategoryQuery("pc-games");
 
   const [softwareList, setSoftwareList] = useState([]);
@@ -85,6 +87,10 @@ export default function Home() {
           }
         />
         <link rel="canonical" href={`https://gaullacltd.co.uk`} />
+        {/* <meta
+          property="og:image"
+          content={data?.data?.software_image || "Default OG Image URL"}
+        /> */}
         <meta
           property="og:url"
           content={"https://gaullacltd.co.uk" || "Default OG URL"}
@@ -119,4 +125,78 @@ export default function Home() {
                           <Link
                             href={`/${item.slug}`}
                             className="btn-transparent anim"
-         
+                          >
+                            View All
+                          </Link>
+                        </div>
+                      </div>
+                      {item.blogs?.data?.length ? (
+                        <>
+                          {item.blogs?.data?.map((meta, idx) => (
+                            <ProductCard key={idx} data={meta} slug={""} />
+                          ))}
+                        </>
+                      ) : (
+                        <div className="">Data No Found!</div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-col md:w-[350px] w-full overflow-hidden">
+                  <div className="flex flex-col gap-4 sticky bg-white  border border-[#ebebeb] p-6 rounded">
+                    <div className="border-b border-solid mb-4 pb-6">
+                      <h3 className="text-xl font-bold">
+                        {blogGameCategoryData?.category?.title || ""}
+                      </h3>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      {blogGameCategoryData?.data?.data.length ? (
+                        <>
+                          {blogGameCategoryData?.data?.data.map(
+                            (item, index) => (
+                              <div key={index} className="flex w-full gap-3">
+                                <Image
+                                  src={item?.software_image}
+                                  alt="logo of software"
+                                  width={65}
+                                  height={65}
+                                />
+                                <div className="flex flex-col">
+                                  <Link
+                                    href={`${item?.category.slug}/${item?.blogkey}`}
+                                    className="text-[#2b373a] cursor-pointer block text-sm font-bold 1overflow-hidden 1text-ellipsis 1whitespace-nowrap"
+                                  >
+                                    {item.software_name || "-"}
+                                  </Link>
+                                  <Link
+                                    href={`/${blogGameCategoryData?.category?.slug}`}
+                                    className="text-[#00856f] text-xs font-bold mb-[2px]"
+                                  >
+                                    {blogGameCategoryData?.category?.title ||
+                                      "-"}
+                                  </Link>
+                                  <div className="text-[#2b373a] text-start font-bold text-xl">
+                                    20{" "}
+                                    <span className="text-xs uppercase text-start">
+                                      GB
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            )
+                          )}
+                        </>
+                      ) : (
+                        <p className="text-sm">Data not found!</p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </Layout>
+      </main>
+    </HelmetWrapper>
+  );
+}
